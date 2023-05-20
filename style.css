@@ -21,12 +21,18 @@ header {
   padding: 1rem;
 }
 
+.search-container {
+  display: flex;
+  gap: 1rem;
+}
+
 img {
   width: 200px;
   border-radius: 10px;
 }
 
-button {
+button,
+input {
   width: fit-content;
   padding: 1rem;
   border-radius: 10px;
