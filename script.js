@@ -15,22 +15,23 @@ function getImage(searchTerm) {
   .catch(function () {
     if (searchTerm === "") {
       getImage("404")
+    } else {
+      console.log("error");
     }
   })
 }
-const button = document.querySelector(".new")
-
-getImage()
-button.addEventListener("click", getImage)
 
 // search
 const searchInput = document.querySelector("input")
 const searchButton = document.querySelector(".search")
 
 searchButton.addEventListener("click", search)
+let searchTerm; 
 
 function search(event) {
   event.preventDefault();
-  const search = searchInput.value
-  getImage(search)
+  searchTerm = searchInput.value
+  getImage(searchTerm)
 }
+
+getImage("cat")
